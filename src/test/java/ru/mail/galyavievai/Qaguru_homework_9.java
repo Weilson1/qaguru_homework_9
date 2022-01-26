@@ -8,6 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class Qaguru_homework_9 {
 
@@ -49,4 +50,10 @@ public class Qaguru_homework_9 {
                 text("My address is not a house and not the street, my address is the Soviet Union"),
                 text("NCR Delhi"));
     }
+
+    @Test
+    void test00() {
+        assertTrue(true);
+    }
+
 }
