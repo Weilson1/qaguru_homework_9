@@ -1,4 +1,4 @@
-package ru.mail.galyavievai.pages;
+package ru.mail.galyavievai.test;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;

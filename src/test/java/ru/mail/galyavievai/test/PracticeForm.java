@@ -1,7 +1,6 @@
 package ru.mail.galyavievai.test;
 
 import org.junit.jupiter.api.Test;
-import ru.mail.galyavievai.pages.RegistrationPage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
