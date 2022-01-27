@@ -30,7 +30,6 @@ public class PracticeForm extends TestBase {
                 .inputCity("Delhi");
         $("#submit").click();
 
-
         $(byText("Thanks for submitting the form")).shouldHave(text("Thanks for submitting the form"));
         registrationPage.checkResult(testDate.randomFirstName + " " + testDate.randomLastName)
                 .checkResult(testDate.randomEmail)
