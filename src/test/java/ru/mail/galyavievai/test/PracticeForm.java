@@ -7,41 +7,41 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-public class PracticeFormWithPageObject extends TestBase {
-
+public class PracticeForm extends TestBase {
+    TestDate testDate = new TestDate();
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
     void successTest() {
         registrationPage
                 .openPage()
-                .inputFirstName("John")
-                .inputLastName("Shepard")
-                .inputUserEmail("jshepard@email.net")
+                .inputFirstName(testDate.randomFirstName)
+                .inputLastName(testDate.randomLastName)
+                .inputUserEmail(testDate.randomEmail)
                 .inputGenderMale()
-                .inputUserNumber("8912345678")
-                .calendarComponent.setDate("09", "2", "1994") // Месяцы начинаются с 0
+                .inputUserNumber(testDate.randomPhoneNumber)
+                .setDate("09", "2", "1994")
                 .inputSubject("Maths")
                 .inputSubject("Economics")
                 .inputHobbies("Sports")
                 .inputHobbies("Reading")
                 .uploadPicture("img/1.png")
-                .inputAddress("My address is not a house and not the street, my address is the Soviet Union")
+                .inputAddress(testDate.randomAddress)
                 .inputState("NCR")
                 .inputCity("Delhi");
         $("#submit").click();
 
-// Проверка теста
+
         $(byText("Thanks for submitting the form")).shouldHave(text("Thanks for submitting the form"));
-        registrationPage.checkResult("John Shepard")
-                .checkResult("jshepard@email.net")
+        registrationPage.checkResult(testDate.randomFirstName + " " + testDate.randomLastName)
+                .checkResult(testDate.randomEmail)
                 .checkResult("Male")
-                .checkResult("8912345678")
+                .checkResult(testDate.randomPhoneNumber)
                 .checkResult("09 March,1994")
                 .checkResult("Maths, Economics")
                 .checkResult("Sports, Reading")
                 .checkResult("1.png")
-                .checkResult("My address is not a house and not the street, my address is the Soviet Union")
-                .checkResult("NCR Delhi");
+                .checkResult(testDate.randomAddress)
+                .checkResult("NCR Deli");
     }
 }
