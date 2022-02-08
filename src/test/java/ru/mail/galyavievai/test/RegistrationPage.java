@@ -12,7 +12,7 @@ public class RegistrationPage {
         SelenideElement
             firstNameType = $("#firstName"),
             lastNameType = $("#lastName"),
-            userEmailType = $("#userEmail"),
+            emailType = $("#userEmail"),
             userNumberType = $("#userNumber"),
             subjectType = $("#subjectsInput"),
             hobbiesType = $("#hobbiesWrapper"),
@@ -43,7 +43,7 @@ public class RegistrationPage {
     }
     @Step ("Вводим Email")
     public RegistrationPage inputUserEmail(String value) {
-        userEmailType.setValue(value);
+        emailType.setValue(value);
 
         return this;
     }
