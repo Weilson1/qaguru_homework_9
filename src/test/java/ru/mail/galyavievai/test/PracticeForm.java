@@ -35,7 +35,7 @@ public class PracticeForm extends TestBase {
                 .checkResult(testDate.randomPhoneNumber)
                 .checkResult("09 March,1994")
                 .checkResult("Chemistry, Physics")
-                .checkResult("Music, Sports")
+                .checkResult("Sports, Reading")
                 .checkResult("1.png")
                 .checkResult(testDate.randomAddress)
                 .checkResult("NCR Delhi");
