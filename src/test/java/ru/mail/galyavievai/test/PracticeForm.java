@@ -33,7 +33,7 @@ public class PracticeForm extends TestBase {
                 .checkResult(testDate.randomEmail)
                 .checkResult("Male")
                 .checkResult(testDate.randomPhoneNumber)
-                .checkResult("09 March,1994")
+                .checkResult("27 February,1988")
                 .checkResult("Maths, Economics")
                 .checkResult("Sports, Reading")
                 .checkResult("1.png")
