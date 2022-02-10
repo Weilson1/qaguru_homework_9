@@ -15,7 +15,7 @@ public class PracticeForm extends TestBase {
                 .inputUserEmail(testDate.randomEmail)
                 .inputGenderMale()
                 .inputUserNumber(testDate.randomPhoneNumber)
-                .setDate("09", "2", "1994")
+                .setDate("27", "2", "1988")
                 .inputSubject("Maths")
                 .inputSubject("Economics")
                 .inputHobbies("Sports")
